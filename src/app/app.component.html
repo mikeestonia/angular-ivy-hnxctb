@@ -1,0 +1,19 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label for="first-name">Nr of items </label>
+  <input id="first-name" type="number" formControlName="numItems" />
+
+  <label for="last-name">Price per </label>
+  <input id="last-name" type="text" formControlName="price" />
+
+  <label for="last-name">state </label>
+  <input id="last-name" type="text" formControlName="state" />
+
+  <p>Complete the form to enable button.</p>
+  <button type="submit" [disabled]="!profileForm.valid">Calcualte</button>
+</form>
+
+RESULT: {{ output }}
+
+<div>{{ profileForm.value | json }}</div>
