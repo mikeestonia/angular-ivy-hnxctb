@@ -18,7 +18,9 @@ export class AppComponent {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    this.output = this.profileForm.controls.numItems.value * this.profileForm.controls.price.value;
+    this.output =
+      this.profileForm.controls.numItems.value *
+      this.profileForm.controls.price.value;
     console.warn(this.profileForm.value);
   }
 }
